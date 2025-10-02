@@ -1,23 +1,28 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Link } from "expo-router";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello Raj Boss</Text>
-
-       <Link href="/(auth)/signup">Signup</Link>
-      <Link href="/(auth)">Login</Link>
+      <Link href="/(auth)/signup" style={styles.link}>
+        Signup
+      </Link>
+      <Link href="/(auth)" style={styles.link}>
+        Login
+      </Link>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-
   },
-  title:{ color: "blue"},
+  link: {
+    fontSize: 18,
+    marginVertical: 15, 
+    color: "blue",
+  },
 });
